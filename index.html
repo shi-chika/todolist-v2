@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Indie+Flower&family=Kalam&family=Noto+Sans+TC&family=Noto+Sans:wght@500&family=Playpen+Sans&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/2b34f8a7fa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./all.css">
+</head>
+<body>
+    <div class="container">
+        <h3>To Do List</h3>
+        <input id="userAdd" type="text" placeholder="入力 …">
+  
+        <select id="type">
+          <option value="normal">一般</option>
+          <option value="important">重要</option>
+          <option value="urgent">緊急</option>
+        </select>
+  
+        <button class="add" onclick="add()">追加</button>
+        <button class="export" onclick="print()">表示</button>
+        <button class="save" onclick="save()" id="saveBtn">保存</button>
+        <br><br>
+        <div id="root" class="listBox">
+        </div>
+  
+  
+      </div>
+      <script src="/app.js"></script>
+</body>
+</html>
