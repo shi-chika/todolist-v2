@@ -31,10 +31,15 @@ let todos = [
       category: selected.value,
       isCompleted: false
     };
-    todos.push(newInput);
-  
-    render();
-    input.value = "";
+    if (input.value !== ""){
+      todos.push(newInput);
+      render();
+      input.value = "";
+      
+    }else{
+      alert('ボックス内に予定を入力してください')
+    }
+    
   }
   
   
@@ -93,15 +98,22 @@ let todos = [
     let str = "";
     for(let item of todos){
       if(item.category === "normal"){
-        str += `${num}. ${item.title} \n `
-      }else if(item.category === "important"){
-         str += `${num}. **${item.title}** \n `
-      }else if(item.category === "urgent"){
-         str += `${num}. ***${item.title}*** \n `
+         str += `${num}. ${item.title} \n `
+      }
+      if(item.category === "important"){
+         str += `${num}. ${item.title} (重要)\n `
+      }
+      if(item.category === "urgent"){
+         str += `${num}. ${item.title} (緊急) \n `
       }
       num++
    }
-    alert(str);
+   if (str !== ""){
+    alert('ToDoリスト :\n'+str);
+   }else{
+    alert('リストアップした項目がありません')
+   }
+   
   }
   
   // 存檔
