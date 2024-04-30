@@ -12,25 +12,36 @@
     <link rel="stylesheet" href="all.css">
 </head>
 <body>
-    <div class="container">
-        <h3>To Do List</h3>
-        <input id="userAdd" type="text" placeholder="入力 …">
-  
-        <select id="type">
-          <option value="normal">通常</option>
-          <option value="important">重要</option>
-          <option value="urgent">緊急</option>
-        </select>
-  
-        <button class="add" onclick="add()">追加</button>
-        <button class="export" onclick="print()">表示</button>
-        <button class="save" onclick="save()" id="saveBtn">保存</button>
-        <br><br>
-        <div id="root" class="listBox">
+  <div class="container">
+    <div class=" todoList">
+      <h3>To Do List</h3>
+      <div class="box">
+        <div class="input-box">
+          <input id="userAdd" class="user-input" type="text" placeholder="入力 …">
+
+          <select id="type" class="user-select">
+            <option value="normal">普通</option>
+            <option value="important">重要</option>
+            <option value="urgent">緊急</option>
+          </select>
+    
+          <button class="add" onclick="add()">追加</button>
         </div>
-  
-  
+       
+        <div class="btn-box">
+          <button class="export" onclick="print()">表示</button>
+          <button class="save" onclick="save()" id="saveBtn">保存</button>
+        </div>
       </div>
-      <script src="app.js"></script>
+
+      <br><br>
+      <div id="root" class="listBox">
+      </div>
+
+
+    </div>
+  </div>
+   
+  <script src="app.js"></script>
 </body>
 </html>

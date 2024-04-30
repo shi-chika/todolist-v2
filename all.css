@@ -53,6 +53,14 @@ a {
   color: black;
 }
 
+input,
+button,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -63,18 +71,22 @@ a {
 body {
   background-color: #DADDB1;
   font-family: "Noto Sans JP", sans-serif;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
-
-h3 {
-  font-size: 36px;
-  margin-bottom: 36px;
-  font-family: Indie Flower, serif;
-  font-weight: 400;
+@media (max-width: 767px) {
+  body {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
 }
 
 .container {
-  margin: 16px auto;
-  max-width: 680px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.todoList {
   padding: 66px;
   background-color: #EBE3D5;
   border-radius: 225px 15px 255px 15px/15px 255px 15px 225px;
@@ -83,9 +95,93 @@ h3 {
   box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
   border-color: #555843;
 }
+@media (max-width: 992px) {
+  .todoList {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .todoList {
+    padding: 54px 20px;
+  }
+}
+
+h3 {
+  font-size: 42px;
+  margin-bottom: 36px;
+  font-family: Indie Flower, serif;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  h3 {
+    font-size: 38px;
+    text-align: center;
+  }
+}
 
 span {
   margin-right: 16px;
+}
+
+.box {
+  display: flex;
+}
+@media (max-width: 992px) {
+  .box {
+    flex-direction: column;
+  }
+}
+
+.input-box {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .input-box {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .input-box {
+    flex-direction: column;
+  }
+}
+
+.btn-box {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .btn-box {
+    justify-content: center;
+  }
+}
+
+.user-input {
+  min-width: 300px;
+  margin-right: 12px;
+  flex-grow: 1;
+}
+@media (max-width: 767px) {
+  .user-input {
+    min-width: 120px;
+    margin-bottom: 24px;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.user-select {
+  padding-right: 16px;
+  padding-left: 16px;
+}
+@media (max-width: 767px) {
+  .user-select {
+    width: 100%;
+    margin-bottom: 34px;
+  }
 }
 
 input,
@@ -98,7 +194,7 @@ select {
   font-size: 1rem;
   line-height: 1.5;
   outline: none;
-  padding: 4px;
+  padding: 4px 12px;
   border-color: #555843;
 }
 
@@ -107,7 +203,7 @@ select {
 }
 
 .listBox {
-  padding-top: 36px;
+  padding-top: 12px;
 }
 
 li {
@@ -172,6 +268,16 @@ i {
   background-color: #776B5D;
   color: #ffffff;
   transition: all 0.2s;
+}
+
+.add {
+  background-color: #B19470;
+}
+@media (max-width: 767px) {
+  .add {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 .add:hover {
