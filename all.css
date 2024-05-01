@@ -53,8 +53,6 @@ a {
   color: black;
 }
 
-input,
-button,
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -243,6 +241,7 @@ i {
   background-color: transparent;
   font-size: 16px;
   transition: 0.3s ease;
+  color: #333333;
 }
 .fa-trash-can:hover {
   color: #c22a2a;
